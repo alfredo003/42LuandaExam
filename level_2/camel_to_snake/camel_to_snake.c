@@ -5,13 +5,13 @@ void camel (char *str)
 	int i = 0;
 	while(str[i])
 	{
-		if(str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] = str[i] + ('a' - 'A');
-			write(1,"_",1);
-		}
-		write(1,&str[i],1);
-		i++;
+	 	if(str[i] >= 'A' && str[i] <= 'Z')
+	 	{
+	 		str[i] = str[i] + ('a' - 'A');
+	 		write(1,"_",1);
+	 	}
+	 	write(1,&str[i],1);
+	 	i++;
 	}
 }
 int main(int argc,char **argv)
