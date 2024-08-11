@@ -9,7 +9,7 @@ void rostring(char *str)
 	while(*str == ' ' || *str == '\t')
 		str++;
 	word_start = str;
-	while(*str != ' ' && *str != '\t')
+	while(*str && *str != ' ' && *str != '\t')
 		str++;
 	word_end = str;
 	while(*str == ' ' ||  *str == '\t')
@@ -40,7 +40,7 @@ void rostring(char *str)
 }
 int main(int argc,char **argv)
 {
-	if(argc >= 2)
+	if(argc > 1)
 		rostring(argv[1]);
 	write(1,"\n",1);
 	return (0);
