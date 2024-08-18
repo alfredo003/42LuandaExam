@@ -1,3 +1,5 @@
+# paramsum
+
 Assignment name  : paramsum
 Expected files   : paramsum.c
 Allowed functions: write
