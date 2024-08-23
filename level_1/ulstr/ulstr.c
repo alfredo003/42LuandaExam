@@ -1,16 +1,16 @@
-#include <unistd.h>
+#include<unistd.h>
+
 
 void ulstr(char *str)
 {
-	int i = 0;
-	while(str[i] != '\0')
+	while(*str)
 	{
-		if(str[i] >='a' && str[i] <= 'z')
-			str[i] = str[i] - ('a' - 'A');
-		else if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] = str[i] + ('a' - 'A');
-		write(1,&str[i],1);
-		i++;
+		if(*str >= 'a' && *str <= 'z')
+			*str -=32;
+		else if (*str >= 'A' && *str <= 'Z')
+			*str +=32;
+		write(1,str,1);
+		str++;
 	}
 }
 int main(int argc,char **argv)
