@@ -36,7 +36,7 @@ char *get_next_line(int fd)
 				break;
 		}
 		line[i++] = buffer[buffer_pos++];
-		if(line[i-1] == '\0')
+		if(line[i-1] == '\n')
 			break;
 	}
 	line[i] = '\0';
